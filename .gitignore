@@ -20,7 +20,10 @@
 /vendor/
 .php~
 /bin/behat
+/bin/doctrine-dbal
+/bin/php-parse
 /bin/phpunit
+/bin/security-checker
 /app/check.php
 /app/SymfonyRequirements.php
 /app/cache/
