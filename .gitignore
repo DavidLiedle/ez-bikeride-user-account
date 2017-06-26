@@ -41,7 +41,7 @@
 /web/design
 /web/extension
 /web/share
-/web/var
+#/web/var
 /web/.htaccess
 composer.phar
 composer.lock
