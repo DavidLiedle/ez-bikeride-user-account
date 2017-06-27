@@ -11,7 +11,7 @@
               content="width=device-width, initial-scale=1">
 
         <title>eZ Platform Tutorial - Bike Rides</title>
-        <!-- <link rel="icon" type="image" href="images/favicon.ico"> -->
+        <!-- <link rel="icon" type="image" href="assets/images/favicon.ico"> -->
 
         <!-- Bootstrap Core CSS -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
@@ -20,10 +20,9 @@
               rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="css/style.css"
-              rel="stylesheet">
-        <link href="css/normalize.css"
-              rel="stylesheet">
+        {% stylesheets 'assets/css/*' filter='cssrewrite' %}
+            <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
 
         <!-- Custom Fonts & Themes -->
         <link rel="stylesheet"
@@ -54,7 +53,7 @@
                     <a class="navbar-brand"
                        href="index.html">
                         <img alt="Brand"
-                             src="images/128_bike_white_avenir.png">
+                             src="assets/images/128_bike_white_avenir.png">
                     </a>
                 </div>
 
@@ -90,7 +89,7 @@
                      id="banner">
                     <div class="col-xs-12">
                         <div class="banner-header-block">
-                            <img src="images/logo_just_letters.png"
+                            <img src="assets/images/logo_just_letters.png"
                                  style="width: 100%;">
                             <h3 class="banner-header">Discover new rides! Go Bike!</h3>
                         </div>
@@ -144,7 +143,7 @@
                             <tbody>
                                 <tr>
                                     <td>
-                                        <img src="images/toulousse.png"
+                                        <img src="assets/images/toulousse.png"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -169,7 +168,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/geneva.png"
+                                        <img src="assets/images/geneva.png"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -194,7 +193,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/hauteville.png"
+                                        <img src="assets/images/hauteville.png"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -219,7 +218,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/lyon.png"
+                                        <img src="assets/images/lyon.png"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -244,7 +243,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/3.jpg"
+                                        <img src="assets/images/3.jpg"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -269,7 +268,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/hauteville.png"
+                                        <img src="assets/images/hauteville.png"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -294,7 +293,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/3.jpg"
+                                        <img src="assets/images/3.jpg"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -319,7 +318,7 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <img src="images/montalieu.png"
+                                        <img src="assets/images/montalieu.png"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -343,7 +342,7 @@
                                 </tr>
                                 <tr>
                                      <td>
-                                        <img src="images/toulousse.png"
+                                        <img src="assets/images/toulousse.png"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -367,7 +366,7 @@
                                 </tr>
                                 <tr>
                                      <td>
-                                        <img src="images/geneva.png"
+                                        <img src="assets/images/geneva.png"
                                              style="width: 100%;">
                                     </td>
                                     <td>
@@ -490,8 +489,10 @@
 
         </footer>
 
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        {% javascripts 'assets/js/jquery.min.js'
+                       'assets/js/*' %}
+            <script src="{{ asset_url }}"></script>
+        {% endjavascripts %}
 
     </body>
 
