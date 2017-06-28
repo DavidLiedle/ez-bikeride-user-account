@@ -38,6 +38,7 @@ ezpublish:
                             Id\Location: 2
                     full_ride:
                         template: "full/ride.html.twig"
+                        controller: "AppBundle:Ride:viewRideWithPOI"
                         match:
                             Identifier\ContentType: "ride"
                 line:
