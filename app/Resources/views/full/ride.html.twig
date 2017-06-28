@@ -82,4 +82,29 @@
       </div>
     </div>
   </section>
+
+  {% if pointOfInterestList is not empty %}
+    <div class="container">
+        <div class="row regular-content-size">
+            <div class="col-xs-10 col-xs-offset-1 padding-box">
+                <section class="photos">
+                    <div class="col-xs-10">
+                        <h4 class="underscore-green">Points of interest:</h4>
+                    </div>
+                    {% for point in pointOfInterestList %}
+                        {{ render( controller( "ez_content:viewLocation",
+                                               {
+                                                  'locationId': point.contentInfo.mainLocationId,
+                                                  'viewType':   'line'
+                                               }
+                                             )
+                                 )
+                        }}
+                    {% endfor %}
+                </section>
+            </div>
+        </div>
+    </div>
+  {% endif %}
+
 {% endblock %}
