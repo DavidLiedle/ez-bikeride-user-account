@@ -1,6 +1,6 @@
 {
-    "name": "ezsystems/ezplatform",
-    "description": "eZ Platform distribution",
+    "name": "DavidLiedle/ez-bikeride-user-account",
+    "description": "Demo of enabling user signup on your site",
     "homepage": "https://github.com/ezsystems/ezplatform",
     "license": "GPL-2.0",
     "type": "project",
@@ -14,10 +14,12 @@
         "ezsystems/ezpublish-community": "*"
     },
     "autoload": {
-        "psr-0": { "": "src/" }
+        "psr-0": {
+            "": "src/"
+        }
     },
     "require": {
-        "php": "~5.6|~7.0",
+        "php": "~7.1",
         "symfony/symfony": "~2.8",
         "twig/extensions": "~1.4",
         "symfony/assetic-bundle": "~2.8",
