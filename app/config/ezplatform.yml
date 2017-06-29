@@ -42,6 +42,10 @@ ezpublish:
                         match:
                             Identifier\ContentType: "ride"
                 line:
+                    line_ride:
+                        template: "line/ride.html.twig"
+                        match:
+                            Identifier\ContentType: "ride"
                     line_point_of_interest:
                         template: "line/point_of_interest.html.twig"
                         match:

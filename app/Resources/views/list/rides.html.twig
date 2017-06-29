@@ -1,0 +1,47 @@
+<div class="row regular-content-size">
+
+  <div class="col-xs-10 col-xs-offset-1 box-style">
+
+    <h3 class="center bottom-plus new-header">List of all Rides</h3>
+
+    {# Loop over the page results #}
+    {% for ride in pagerRides %}
+
+      {% if loop.first %}
+
+        <table class="table table-hover">
+          <thead>
+          <tr class="table-header">
+            <th> Ride</th>
+            <th>From</th>
+            <th> To</th>
+            <th>Distance</th>
+            <th>Level</th>
+          </tr>
+          </thead>
+          <tbody>
+
+      {% endif %}
+
+      {{
+          render( controller( 'ez_content:viewLocation',
+                              {
+                                'locationId': ride.versionInfo.contentInfo.mainLocationId,
+                                'viewType':   'line'
+                              }
+                            )
+                )
+      }}
+
+      {% if loop.last %}
+
+          </tbody>
+        </table>
+
+      {% endif %}
+
+    {% endfor %}
+
+  </div><!-- div class="col-xs-10 col-xs-offset-1 box-style" -->
+
+</div><!-- END div class="row regular-content-size" -->

@@ -5,4 +5,5 @@
   <div class="col-xs-10 text-justified">
     {{ ez_render_field(content, 'description') }}
   </div>
+  {{ render( controller( "AppBundle:Homepage:getAllRides" ) ) }}
 {% endblock %}
