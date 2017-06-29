@@ -42,6 +42,7 @@
 /web/extension
 /web/share
 #/web/var
+/web/var/site/storage/images/_aliases
 /web/.htaccess
 composer.phar
 composer.lock
