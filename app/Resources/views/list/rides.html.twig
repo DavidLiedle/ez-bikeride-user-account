@@ -42,6 +42,13 @@
 
     {% endfor %}
 
+    {% if app.user %}
+    <p>
+      [ <a href="/content/create/nodraft/ride/eng-GB/2"
+         style="color:black;">Create a New Ride</a> ]
+    </p>
+    {% endif %}
+
   </div><!-- div class="col-xs-10 col-xs-offset-1 box-style" -->
 
 </div><!-- END div class="row regular-content-size" -->
