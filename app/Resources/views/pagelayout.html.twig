@@ -84,7 +84,8 @@
                         </li>
                         <li>
                           {% if app.user %}
-                          <a href="{{ path('logout') }}">[Log Out]</a>
+                          {% set user = app.user.getAPIUser().content %}
+                          <a href="{{ path('logout') }}">[Log Out {{ ez_content_name(user) }}]</a>
                           {% else %}
                           <a href="{{ path('ez_user_register') }}">[Log In / Register]</a>
                           {% endif %}
