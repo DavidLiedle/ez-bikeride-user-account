@@ -52,6 +52,7 @@ class AppKernel extends Kernel
             new Bazinga\Bundle\JsTranslationBundle\BazingaJsTranslationBundle(),
             new JMS\TranslationBundle\JMSTranslationBundle(),
             new AppBundle\AppBundle(),
+            new EzSystems\GpxFieldTypeBundle\EzSystemsGpxFieldTypeBundle(),
         );
 
         switch ($this->getEnvironment()) {

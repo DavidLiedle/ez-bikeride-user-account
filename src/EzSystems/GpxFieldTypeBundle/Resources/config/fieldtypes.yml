@@ -1,0 +1,12 @@
+services:
+    ezsystems.gpxbundle.fieldtype.ezgpx:
+        parent: ezpublish.fieldType
+        class: EzSystems\GpxFieldTypeBundle\eZ\Publish\FieldType\Gpx\Type
+        tags:
+            - {name: ezpublish.fieldType, alias: ezgpx}
+        arguments: ['@ezsystems.gpxbundle.gpx.client']
+
+    ezsystems.gpxbundle.fieldtype.ezgpx.converter:
+        class: EzSystems\GpxFieldTypeBundle\eZ\Publish\FieldType\Gpx\LegacyConverter
+        tags:
+            - {name: ezpublish.storageEngine.legacy.converter, alias: ezgpx}

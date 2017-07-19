@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentTypeCreate>
+    <identifier>gpx</identifier>
+    <mainLanguageCode>eng-GB</mainLanguageCode>
+    <urlAliasSchema>&lt;gpx&gt;</urlAliasSchema>
+    <nameSchema>&lt;gpx&gt;</nameSchema>
+    <isContainer>false</isContainer>
+    <defaultSortField>PATH</defaultSortField>
+    <defaultSortOrder>ASC</defaultSortOrder>
+    <defaultAlwaysAvailable>true</defaultAlwaysAvailable>
+    <names>
+        <value languageCode="eng-GB">A gpx</value>
+    </names>
+    <descriptions>
+        <value languageCode="eng-GB">A gpx, as embedded from a url</value>
+    </descriptions>
+    <modificationDate>2013-09-10T15:46:00</modificationDate>
+    <User href="/api/ezp/v2/user/users/14" />
+    <FieldDefinitions>
+        <FieldDefinition>
+            <identifier>gpx</identifier>
+            <fieldType>ezgpx</fieldType>
+            <names>
+                <value languageCode="eng-GB">Gpx</value>
+            </names>
+            <fieldGroup>content</fieldGroup>
+            <position>1</position>
+            <isTranslatable>true</isTranslatable>
+            <isRequired>true</isRequired>
+            <isInfoCollector>false</isInfoCollector>
+            <isSearchable>false</isSearchable>
+        </FieldDefinition>
+    </FieldDefinitions>
+</ContentTypeCreate>
